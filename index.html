@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Интерактивный курс математики с нуля: примеры, дроби, степени, корни, уравнения, бесконечность и графики.">
+  <title>Математика без страха</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307111f'/%3E%3Cpath d='M14 19h11l7 25 9-31h10' fill='none' stroke='%236ee7d2' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">√</span>
+        <div><strong>Математика</strong><small>без страха</small></div>
+      </div>
+
+      <div class="progress-card" aria-live="polite">
+        <div class="progress-copy"><span>Ваш путь</span><strong id="progressLabel">0%</strong></div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+        <small id="progressDetail">Начните с первого шага</small>
+      </div>
+
+      <nav id="courseNav" aria-label="Разделы курса"></nav>
+
+      <button class="reset-link" id="resetProgress" type="button">Сбросить прогресс</button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Открыть содержание" aria-expanded="false">☰</button>
+        <div class="crumb" id="crumb">Шаг 1 из 13</div>
+        <div class="top-actions">
+          <button class="quiet-button" id="fontButton" type="button" aria-label="Увеличить текст">Аа</button>
+          <button class="quiet-button" id="rulesButton" type="button">Шпаргалка</button>
+        </div>
+      </header>
+
+      <article id="lesson" class="lesson" tabindex="-1"></article>
+
+      <footer class="lesson-footer">
+        <button class="secondary-button" id="prevButton" type="button">← Назад</button>
+        <button class="primary-button" id="nextButton" type="button">Следующий шаг →</button>
+      </footer>
+    </main>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+
+  <dialog id="rulesDialog" class="rules-dialog">
+    <form method="dialog">
+      <div class="dialog-head">
+        <div><span class="eyebrow">Короткая память</span><h2>10 правил, которые правда нужны</h2></div>
+        <button class="icon-button" aria-label="Закрыть">×</button>
+      </div>
+      <ol class="rules-list">
+        <li><b>Сначала поймите запись.</b> Решать можно только после того, как вы назвали её большие блоки.</li>
+        <li><b>Скобки — один контейнер.</b> Сначала работаем внутри них.</li>
+        <li><b>Порядок:</b> скобки → степени и корни → умножение и деление → сложение и вычитание.</li>
+        <li><b>Знак между числом и буквой можно не писать:</b> 4x = 4 · x.</li>
+        <li><b>Складываются только одинаковые части:</b> 3x + 5x = 8x, но 3x + 5x² не склеиваются.</li>
+        <li><b>Дробь — деление:</b> верх делится на низ. Черта дроби работает как большие скобки.</li>
+        <li><b>Степень считает одинаковые множители:</b> x³ = x · x · x.</li>
+        <li><b>Корень отменяет степень:</b> √25 спрашивает, какое число в квадрате даёт 25.</li>
+        <li><b>Уравнение — весы:</b> одинаковое действие делаем с обеими сторонами.</li>
+        <li><b>График — рисунок всех ответов:</b> выбираем x, считаем y, ставим точку (x; y).</li>
+      </ol>
+      <button class="primary-button full" value="close">Понятно</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
