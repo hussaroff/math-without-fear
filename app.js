@@ -473,6 +473,250 @@ const lessons = [
       {q:"График пересёк ось x в точке x = 4. Чему равно f(4)?", a:["0","f(4)=0"], hint:"На горизонтальной оси координата y равна нулю.", solution:"f(4) = 0."},
       {q:"Что нужно сделать первым при построении графика по формуле?", a:["выбрать x","выбрать значения x","составить таблицу","таблица"], hint:"Нужны входные значения.", solution:"Выбрать несколько удобных x и составить таблицу значений."}
     ]
+  },
+  {
+    title: "Минус без путаницы",
+    nav: "Отрицательные числа",
+    tag: "Левее нуля",
+    intro: "Отрицательное число — не особый вид математики. Это число левее нуля: долг, мороз или движение назад. Чем дальше оно влево, тем оно меньше.",
+    body: `
+      <h2>Числовая прямая</h2>
+      <div class="equals-flow"><span class="math big">−3</span><span class="flow-arrow">→</span><span class="math big">−2</span><span class="flow-arrow">→</span><span class="math big">−1</span><span class="flow-arrow">→</span><span class="math big">0</span><span class="flow-arrow">→</span><span class="math big">1</span><span class="flow-arrow">→</span><span class="math big">2</span></div>
+      <p>Правее — больше. Поэтому −2 больше, чем −7: число −2 находится ближе к нулю.</p>
+      <div class="concept-grid">
+        <section class="concept-card"><h3>Прибавить плюс</h3><p>Идём вправо.</p><span class="math">−3 + 5 = 2</span></section>
+        <section class="concept-card"><h3>Прибавить минус</h3><p>Идём влево.</p><span class="math">3 + (−5) = −2</span></section>
+        <section class="concept-card"><h3>Минус на минус</h3><p>При умножении два минуса дают плюс.</p><span class="math">(−3) · (−2) = 6</span></section>
+        <section class="concept-card"><h3>Один минус</h3><p>Плюс на минус даёт минус.</p><span class="math">3 · (−2) = −6</span></section>
+      </div>
+      <div class="worked-example"><header>Считаем −4 + 7</header><ol class="work-steps">
+        <li><span>Стоим на числе −4.</span></li>
+        <li><span>Прибавляем 7 — делаем семь шагов вправо.</span></li>
+        <li><span>До нуля четыре шага, остаётся ещё три.</span></li>
+        <li><span>Останавливаемся на 3. Значит −4 + 7 = 3.</span></li>
+      </ol></div>
+      <div class="rule-box"><p><b>Скобки защищают знак числа.</b> (−3)² означает (−3) · (−3) = 9. А −3² означает минус перед результатом 3², то есть −9.</p></div>
+    `,
+    exercises: [
+      {q:"Какое число больше: −3 или −8?", a:["-3","−3"], hint:"Какое число ближе к нулю и находится правее?", solution:"−3 больше: оно правее −8."},
+      {q:"Посчитайте: −4 + 9", a:["5"], hint:"От −4 сделайте девять шагов вправо.", solution:"До нуля четыре шага, ещё пять шагов приводят к 5."},
+      {q:"Посчитайте: 3 − 8", a:["-5","−5"], hint:"От тройки идите восемь шагов влево.", solution:"3 − 8 = −5."},
+      {q:"Посчитайте: (−4) · 3", a:["-12","−12"], hint:"Один минус даёт отрицательный результат.", solution:"4 · 3 = 12; знак один отрицательный, поэтому −12."},
+      {q:"Посчитайте: (−4) · (−3)", a:["12"], hint:"Два минуса при умножении дают плюс.", solution:"4 · 3 = 12; два минуса дают плюс."},
+      {q:"Посчитайте: (−5)²", a:["25"], hint:"Это (−5) · (−5).", solution:"Два отрицательных множителя дают положительное число 25."}
+    ]
+  },
+  {
+    title: "Модуль — расстояние до нуля",
+    nav: "Модуль числа",
+    tag: "Вертикальные черты",
+    intro: "Запись |x| не делает ничего таинственного. Она спрашивает только одно: на каком расстоянии число находится от нуля. Расстояние не бывает отрицательным.",
+    body: `
+      <div class="concept-grid">
+        <section class="concept-card"><h3>Число справа</h3><p>Пятёрка находится в пяти шагах от нуля.</p><span class="math">|5| = 5</span></section>
+        <section class="concept-card"><h3>Число слева</h3><p>Минус пять тоже находится в пяти шагах от нуля.</p><span class="math">|−5| = 5</span></section>
+      </div>
+      <h2>Почему у |x| = 4 два ответа</h2>
+      <p>На расстоянии четырёх шагов от нуля находятся два числа: 4 справа и −4 слева.</p>
+      <div class="equals-flow"><span class="math big">|x| = 4</span><span class="flow-arrow">→</span><span class="math big">x = 4 или x = −4</span></div>
+      <div class="worked-example"><header>Решаем |x − 3| = 2</header><ol class="work-steps">
+        <li><span>|x − 3| — это расстояние между x и числом 3.</span></li>
+        <li><span>Нужно отойти от тройки на два шага вправо или влево.</span></li>
+        <li><span>Вправо: 3 + 2 = 5.</span></li>
+        <li><span>Влево: 3 − 2 = 1.</span></li>
+        <li><span>Ответ: x = 5 или x = 1.</span></li>
+      </ol></div>
+      <div class="rule-box"><p>|x| всегда больше или равен нулю. Поэтому уравнение |x| = −3 не имеет решений: расстояние не может быть минус три.</p></div>
+    `,
+    exercises: [
+      {q:"Посчитайте: |−9|", a:["9"], hint:"Сколько шагов от −9 до нуля?", solution:"Девять шагов, поэтому |−9| = 9."},
+      {q:"Посчитайте: |4|", a:["4"], hint:"Положительное число уже показывает расстояние.", solution:"|4| = 4."},
+      {q:"Решите |x| = 6. Запишите оба ответа через «и».", a:["6 и -6","-6 и 6","6,-6","-6,6","6 и −6","−6 и 6"], hint:"На расстоянии 6 от нуля есть точка справа и точка слева.", solution:"x = 6 или x = −6."},
+      {q:"Есть ли решения у |x| = −2?", a:["нет","нет решений","не существует"], hint:"Может ли расстояние быть отрицательным?", solution:"Нет. Модуль не может быть отрицательным."},
+      {q:"Решите |x − 5| = 1. Запишите ответы через «и».", a:["4 и 6","6 и 4","4,6","6,4"], hint:"Отойдите от пятёрки на один шаг в обе стороны.", solution:"5 − 1 = 4 и 5 + 1 = 6."},
+      {q:"Чему равно |3 − 8|?", a:["5"], hint:"Сначала 3 − 8 = −5, затем найдите расстояние до нуля.", solution:"|3 − 8| = |−5| = 5."}
+    ]
+  },
+  {
+    title: "Два неизвестных и две подсказки",
+    nav: "Системы уравнений",
+    tag: "Ищем x и y",
+    intro: "Одного уравнения с x и y обычно мало. Второе уравнение даёт вторую подсказку. Нужно найти одну пару чисел, которая одновременно подходит обеим строкам.",
+    body: `
+      <h2>Почему одной строки мало</h2>
+      <p>Уравнению x + y = 10 подходят разные пары: 1 и 9, 2 и 8, 3 и 7. Поэтому узнать сразу оба числа нельзя.</p>
+      <div class="plain-box"><p>Если добавить вторую подсказку x − y = 2, вариантов становится намного меньше. Теперь нужна пара, подходящая сразу двум условиям.</p></div>
+      <div class="worked-example"><header>Решаем x + y = 10 и x − y = 2</header><ol class="work-steps">
+        <li><span>Складываем строки: (x + y) + (x − y) = 10 + 2.</span></li>
+        <li><span>+y и −y уничтожают друг друга. Остаётся 2x = 12.</span></li>
+        <li><span>Делим на 2: x = 6.</span></li>
+        <li><span>Подставляем 6 в первую строку: 6 + y = 10.</span></li>
+        <li><span>Значит y = 4. Ответ — пара (6; 4).</span></li>
+      </ol></div>
+      <h2>Способ подстановки</h2>
+      <div class="worked-example"><header>Дано y = x + 1 и x + y = 7</header><ol class="work-steps">
+        <li><span>Первая строка уже говорит, чем заменить y: выражением x + 1.</span></li>
+        <li><span>Подставляем во вторую: x + (x + 1) = 7.</span></li>
+        <li><span>Получаем 2x + 1 = 7, значит 2x = 6 и x = 3.</span></li>
+        <li><span>Тогда y = 3 + 1 = 4.</span></li>
+      </ol></div>
+      <div class="rule-box"><p>Ответ системы — не отдельный x и отдельный y, а одна пара (x; y). Она должна пройти проверку в каждом уравнении.</p></div>
+    `,
+    exercises: [
+      {q:"Подходит ли пара x = 6, y = 4 уравнению x + y = 10?", a:["да","подходит","да подходит"], hint:"Сложите 6 и 4.", solution:"6 + 4 = 10, поэтому подходит."},
+      {q:"Дано x + y = 9 и x − y = 1. Что получится после сложения строк?", a:["2x=10","2x = 10"], hint:"+y и −y исчезнут.", solution:"2x = 10."},
+      {q:"Дано 2x = 10. Чему равен x?", a:["5","x=5"], hint:"Разделите 10 на 2.", solution:"x = 5."},
+      {q:"Если x = 5 и x + y = 9, чему равен y?", a:["4","y=4"], hint:"5 + y = 9.", solution:"y = 9 − 5 = 4."},
+      {q:"Решите систему x + y = 9, x − y = 1. Запишите ответ (x;y).", a:["(5;4)","5;4","(5,4)"], hint:"Сложите строки, найдите x, затем подставьте его обратно.", solution:"2x = 10, значит x = 5. Тогда y = 4. Ответ (5; 4)."},
+      {q:"Дано y = x + 2 и x + y = 8. Чему равен x?", a:["3","x=3"], hint:"Замените y выражением x + 2.", solution:"x + (x + 2) = 8; 2x = 6; x = 3."}
+    ]
+  },
+  {
+    title: "Квадратные уравнения: делаем скобки сами",
+    nav: "Разложение на скобки",
+    tag: "Без дискриминанта",
+    intro: "В примере x² + 5x − 6 = 0 нельзя просто убрать число и разделить: x находится сразу в x² и в 5x. Поэтому превращаем сумму в произведение двух скобок.",
+    body: `
+      <h2>Что нужно увидеть</h2>
+      <div class="structure-demo">
+        <div class="structure-root"><div class="block-chip root-chip">x² + 5x − 6</div><div class="structure-line"></div></div>
+        <div class="structure-branch"><div class="block-chip">x²</div><div class="block-chip">+ 5x</div><div class="block-chip">− 6</div></div>
+      </div>
+      <p>Это три части: квадрат x, пять обычных x и число −6. Нам нужны две скобки вида (x + число)(x + число).</p>
+      <h2>Ищем два числа</h2>
+      <div class="concept-grid">
+        <section class="concept-card"><h3>Сложить → получить 5</h3><p>Сумма чисел должна дать число перед x.</p><span class="math">6 + (−1) = 5</span></section>
+        <section class="concept-card"><h3>Умножить → получить −6</h3><p>Произведение должно дать последнее число.</p><span class="math">6 · (−1) = −6</span></section>
+      </div>
+      <div class="worked-example"><header>Решаем x² + 5x − 6 = 0</header><ol class="work-steps">
+        <li><span>Перебираем пары для числа 6: 1 и 6; 2 и 3.</span></li>
+        <li><span>Произведение отрицательное, значит один знак плюс, другой минус.</span></li>
+        <li><span>Подходят 6 и −1: их сумма 5, произведение −6.</span></li>
+        <li><span>Записываем скобки: (x + 6)(x − 1) = 0.</span></li>
+        <li><span>x + 6 = 0 даёт x = −6.</span></li>
+        <li><span>x − 1 = 0 даёт x = 1.</span></li>
+      </ol></div>
+      <h2>Почему скобки правильные</h2>
+      <div class="equals-flow"><span class="math big">(x + 6)(x − 1)</span><span class="flow-arrow">=</span><span class="math big">x² − x + 6x − 6</span><span class="flow-arrow">=</span><span class="math big">x² + 5x − 6</span></div>
+      <div class="rule-box"><p>Для x² + bx + c ищем два числа: <b>их сумма равна b</b>, а <b>произведение равно c</b>. Этот простой подбор работает, когда перед x² стоит 1 и подходящие целые числа существуют.</p></div>
+      <div class="plain-box"><p><b>Подсказка по знакам:</b> последнее число отрицательное — знаки разные. Последнее положительное и среднее положительное — оба плюса. Последнее положительное и среднее отрицательное — оба минуса.</p></div>
+      <div class="warning-box"><p>Из x² + 5x − 6 = 0 нельзя писать x² = 5x − 6. Если действительно оставить x² слева, получится x² = −5x + 6. Но это ещё не решает уравнение, потому что x всё равно остался с обеих сторон.</p></div>
+      <h2>Тренируйтесь столько, сколько нужно</h2>
+      <div class="trainer-grid">
+        <section class="trainer-card">
+          <span class="eyebrow">Тренажёр 1</span>
+          <h3>Подберите два числа</h3>
+          <p id="pairPrompt" class="trainer-question"></p>
+          <div class="trainer-inputs"><input id="pairFirst" type="number" aria-label="Первое число" placeholder="Первое"><input id="pairSecond" type="number" aria-label="Второе число" placeholder="Второе"></div>
+          <div id="pairFeedback" class="feedback" aria-live="polite"></div>
+          <div class="exercise-actions"><button id="pairCheck" class="primary-button" type="button">Проверить</button><button id="pairNext" class="text-button" type="button">Новая пара →</button></div>
+        </section>
+        <section class="trainer-card">
+          <span class="eyebrow">Тренажёр 2</span>
+          <h3>Найдите оба корня</h3>
+          <p id="quadraticPrompt" class="trainer-question math"></p>
+          <div class="trainer-inputs"><input id="rootFirst" type="number" aria-label="Первый корень" placeholder="Первый x"><input id="rootSecond" type="number" aria-label="Второй корень" placeholder="Второй x"></div>
+          <div id="quadraticFeedback" class="feedback" aria-live="polite"></div>
+          <div class="exercise-actions"><button id="quadraticCheck" class="primary-button" type="button">Проверить</button><button id="quadraticNext" class="text-button" type="button">Новое уравнение →</button></div>
+        </section>
+      </div>
+    `,
+    exercises: [
+      {q:"Какие два числа в сумме дают 5, а при умножении −6? Запишите через «и».", a:["6 и -1","-1 и 6","6,-1","-1,6","6 и −1","−1 и 6"], hint:"Один знак должен быть плюсом, другой минусом.", solution:"6 и −1: сумма 5, произведение −6."},
+      {q:"Разложите: x² + 5x − 6", a:["(x+6)(x-1)","(x − 1)(x + 6)","(x-1)(x+6)"], hint:"Используйте числа 6 и −1.", solution:"x² + 5x − 6 = (x + 6)(x − 1)."},
+      {q:"Решите x² + 5x − 6 = 0. Запишите ответы через «и».", a:["1 и -6","-6 и 1","1,-6","-6,1","1 и −6","−6 и 1"], hint:"После скобок решите x + 6 = 0 и x − 1 = 0.", solution:"x = −6 или x = 1."},
+      {q:"Какие два числа в сумме дают −5, а при умножении 6?", a:["-2 и -3","-3 и -2","−2 и −3","−3 и −2","-2,-3","-3,-2"], hint:"Произведение положительное, сумма отрицательная — оба числа отрицательные.", solution:"−2 и −3."},
+      {q:"Разложите: x² − 5x + 6", a:["(x-2)(x-3)","(x − 2)(x − 3)","(x-3)(x-2)"], hint:"Нужны числа −2 и −3.", solution:"x² − 5x + 6 = (x − 2)(x − 3)."},
+      {q:"Решите x² − 5x + 6 = 0. Запишите ответы через «и».", a:["2 и 3","3 и 2","2,3","3,2"], hint:"Каждую скобку приравняйте к нулю.", solution:"(x − 2)(x − 3) = 0, поэтому x = 2 или x = 3."},
+      {q:"Разложите: x² + x − 6", a:["(x+3)(x-2)","(x − 2)(x + 3)","(x-2)(x+3)"], hint:"Какие числа дают сумму 1 и произведение −6?", solution:"Это 3 и −2, поэтому (x + 3)(x − 2)."},
+      {q:"Проверьте: является ли x = −6 решением x² + 5x − 6 = 0?", a:["да","подходит","да подходит"], hint:"Подставьте −6 вместо каждого x.", solution:"36 − 30 − 6 = 0. Да, подходит."}
+    ]
+  },
+  {
+    title: "Логарифм — вопрос о степени",
+    nav: "Логарифмы",
+    tag: "Какая степень нужна",
+    intro: "Логарифм — это обратная дорога от результата к показателю степени. Он спрашивает: в какую степень нужно возвести основание, чтобы получить нужное число?",
+    body: `
+      <h2>Одна и та же мысль двумя способами</h2>
+      <div class="equals-flow"><span class="math big">2³ = 8</span><span class="flow-arrow">то же самое</span><span class="math big">log₂ 8 = 3</span></div>
+      <p>Читаем log₂ 8 = 3 так: «в какую степень возвести 2, чтобы получить 8?» Ответ — в третью.</p>
+      <div class="concept-grid">
+        <section class="concept-card"><h3>Нижняя двойка</h3><p>Основание: какое число возводим в степень.</p><span class="math">log₂ 8</span></section>
+        <section class="concept-card"><h3>Восьмёрка</h3><p>Результат, который хотим получить.</p><span class="math">2<sup>?</sup> = 8</span></section>
+        <section class="concept-card"><h3>Ответ 3</h3><p>Показатель степени, потому что 2 · 2 · 2 = 8.</p><span class="math">log₂ 8 = 3</span></section>
+        <section class="concept-card"><h3>Ответ может быть нулём</h3><p>Любое допустимое основание в нулевой степени даёт 1.</p><span class="math">log₅ 1 = 0</span></section>
+      </div>
+      <div class="worked-example"><header>Решаем log₂ x = 5</header><ol class="work-steps">
+        <li><span>Переводим на обычный язык: двойку возвели в степень 5 и получили x.</span></li>
+        <li><span>x = 2⁵.</span></li>
+        <li><span>2 · 2 · 2 · 2 · 2 = 32.</span></li>
+        <li><span>Поэтому x = 32.</span></li>
+      </ol></div>
+      <h2>Отрицательный ответ тоже возможен</h2>
+      <div class="equals-flow"><span class="math big">2⁻³ = 1/8</span><span class="flow-arrow">поэтому</span><span class="math big">log₂(1/8) = −3</span></div>
+      <div class="rule-box"><p>В обычных действительных числах под логарифмом должно стоять число больше нуля. Нельзя писать log₂ 0 или log₂(−5).</p></div>
+      <div class="plain-box"><p>Чаще всего встречаются log₁₀ — десятичный логарифм и ln — логарифм с особым основанием e. Смысл у них тот же: найти показатель степени.</p></div>
+    `,
+    exercises: [
+      {q:"Чему равен log₂ 8?", a:["3"], hint:"2 в какой степени даёт 8?", solution:"2³ = 8, поэтому log₂ 8 = 3."},
+      {q:"Чему равен log₁₀ 100?", a:["2"], hint:"10 · 10 = 100.", solution:"10² = 100, поэтому ответ 2."},
+      {q:"Чему равен log₃ 1?", a:["0"], hint:"Любое допустимое число в нулевой степени равно 1.", solution:"3⁰ = 1, поэтому log₃ 1 = 0."},
+      {q:"Чему равен log₂(1/8)?", a:["-3","−3"], hint:"2⁻³ = 1/2³.", solution:"2⁻³ = 1/8, поэтому ответ −3."},
+      {q:"Решите: log₂ x = 4", a:["16","x=16"], hint:"Переведите: x = 2⁴.", solution:"x = 2⁴ = 16."},
+      {q:"Решите: 3ˣ = 27", a:["3","x=3"], hint:"Сколько троек нужно перемножить, чтобы получить 27?", solution:"3³ = 27, поэтому x = 3."},
+      {q:"Существует ли обычный действительный log₂(−4)?", a:["нет","не существует","нет решений"], hint:"Под логарифмом должно быть положительное число.", solution:"Нет. Обычный действительный логарифм отрицательного числа не определён."}
+    ]
+  },
+  {
+    title: "Пределы: куда приближается результат",
+    nav: "Пределы",
+    tag: "lim без паники",
+    intro: "Предел не всегда спрашивает значение прямо в точке. Он смотрит, что происходит рядом с ней: к какому числу или направлению приближается результат.",
+    body: `
+      <h2>Как читать запись lim</h2>
+      <div class="equals-flow"><span class="math big">lim x→2 (x + 3) = 5</span></div>
+      <p>Читаем словами: «когда x подходит всё ближе к 2, выражение x + 3 подходит всё ближе к 5».</p>
+      <div class="concept-grid">
+        <section class="concept-card"><h3>x → 0</h3><p>x становится всё ближе к нулю: 0,1; 0,01; 0,001.</p><span class="math">lim x→0 (2x + 1) = 1</span></section>
+        <section class="concept-card"><h3>x → 2</h3><p>x подходит к двойке: 1,9; 1,99; 2,01.</p><span class="math">lim x→2 x² = 4</span></section>
+        <section class="concept-card"><h3>x → +∞</h3><p>x растёт вправо без границы: 10, 100, 1000…</p><span class="math">lim x→+∞ 1/x = 0</span></section>
+        <section class="concept-card"><h3>x → −∞</h3><p>x уходит влево: −10, −100, −1000…</p><span class="math">lim x→−∞ 1/x = 0</span></section>
+      </div>
+      <h2>Первое действие — попробовать подставить</h2>
+      <div class="worked-example"><header>Находим lim x→2 (3x + 1)</header><ol class="work-steps">
+        <li><span>Пробуем поставить x = 2.</span></li>
+        <li><span>3 · 2 + 1 = 7.</span></li>
+        <li><span>Никакой проблемы не появилось, значит предел равен 7.</span></li>
+      </ol></div>
+      <h2>Подход к нулю с двух сторон</h2>
+      <div class="concept-grid">
+        <section class="concept-card"><h3>x → 0+</h3><p>Подходим справа положительными числами. 1/x растёт вверх.</p><span class="math">1/0,1 = 10; 1/0,01 = 100</span></section>
+        <section class="concept-card"><h3>x → 0−</h3><p>Подходим слева отрицательными числами. 1/x уходит вниз.</p><span class="math">1/(−0,1) = −10</span></section>
+      </div>
+      <div class="warning-box"><p>Поэтому общего предела lim x→0 1/x не существует: справа получается +∞, а слева −∞. Но само выражение 1/0 всё равно не определено.</p></div>
+      <h2>Что означает странный результат 0/0</h2>
+      <div class="worked-example"><header>Находим lim x→2 (x² − 4)/(x − 2)</header><ol class="work-steps">
+        <li><span>Прямая подстановка даёт 0/0. Это не ответ, а сигнал: выражение нужно упростить.</span></li>
+        <li><span>x² − 4 = (x − 2)(x + 2).</span></li>
+        <li><span>Рядом с двойкой x − 2 не равно нулю, поэтому одинаковый множитель сокращается.</span></li>
+        <li><span>Остаётся x + 2.</span></li>
+        <li><span>Теперь подставляем 2: получаем 4.</span></li>
+      </ol></div>
+      <div class="rule-box"><p><b>Порядок:</b> прочитайте, куда идёт x → попробуйте подставить → если получилось обычное число, это ответ → если получилось 0/0, сначала упростите → отдельно проверяйте подход справа и слева, если знаменатель идёт к нулю.</p></div>
+      <div class="plain-box"><p>+∞ и −∞ здесь показывают направление поведения. Это не обычные числа, которые можно подставить вместо x или складывать как 5 и −5.</p></div>
+    `,
+    exercises: [
+      {q:"Найдите lim x→2 (x + 4)", a:["6"], hint:"Попробуйте просто поставить x = 2.", solution:"2 + 4 = 6."},
+      {q:"Найдите lim x→0 (3x + 2)", a:["2"], hint:"Поставьте вместо x ноль.", solution:"3 · 0 + 2 = 2."},
+      {q:"Найдите lim x→−2 x²", a:["4"], hint:"(−2)² = ?", solution:"(−2)² = 4."},
+      {q:"К чему стремится 1/x при x→+∞?", a:["0","к нулю","ноль"], hint:"Сравните 1/10, 1/100 и 1/1000.", solution:"К нулю."},
+      {q:"К чему стремится 1/x при x→−∞?", a:["0","к нулю","ноль"], hint:"Получаются маленькие отрицательные числа, всё ближе к нулю.", solution:"К нулю со стороны отрицательных значений."},
+      {q:"Куда стремится 1/x при x→0+?", a:["+бесконечность","бесконечность","+∞","∞"], hint:"1/0,1 = 10, а 1/0,01 = 100.", solution:"К +∞."},
+      {q:"Куда стремится 1/x при x→0−?", a:["-бесконечность","−бесконечность","-∞","−∞"], hint:"Делим единицу на всё меньшие отрицательные числа.", solution:"К −∞."},
+      {q:"Существует ли общий предел lim x→0 1/x?", a:["нет","не существует","нет предела"], hint:"Справа получается +∞, слева −∞.", solution:"Нет: поведение с двух сторон разное."},
+      {q:"Найдите lim x→2 (x² − 4)/(x − 2)", a:["4"], hint:"Разложите x² − 4 = (x − 2)(x + 2) и сократите.", solution:"После сокращения остаётся x + 2. При x → 2 получаем 4."}
+    ]
   }
 ];
 
@@ -539,6 +783,7 @@ function renderLesson() {
   renderNav();
   initReader();
   initGraph();
+  initFactorTrainers();
 }
 
 function renderExercise() {
@@ -695,6 +940,86 @@ function initReader() {
 
 function escapeHtml(value) {
   return value.replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"})[ch]);
+}
+
+const factorPairs = [[6, -1], [-2, -3], [3, -2], [4, 2], [-4, -1], [5, -3], [1, 7], [-5, 2]];
+
+function formatSigned(value, suffix = "") {
+  return `${value < 0 ? "−" : "+"} ${Math.abs(value)}${suffix}`;
+}
+
+function initFactorTrainers() {
+  const pairPrompt = document.getElementById("pairPrompt");
+  if (!pairPrompt) return;
+
+  let pairIndex = 0;
+  let equationIndex = 1;
+  const pairFirst = document.getElementById("pairFirst");
+  const pairSecond = document.getElementById("pairSecond");
+  const pairFeedback = document.getElementById("pairFeedback");
+  const quadraticPrompt = document.getElementById("quadraticPrompt");
+  const rootFirst = document.getElementById("rootFirst");
+  const rootSecond = document.getElementById("rootSecond");
+  const quadraticFeedback = document.getElementById("quadraticFeedback");
+
+  const nextIndex = current => (current + 1 + Math.floor(Math.random() * (factorPairs.length - 1))) % factorPairs.length;
+  const sameUnorderedPair = (a, b, expectedA, expectedB) =>
+    (a === expectedA && b === expectedB) || (a === expectedB && b === expectedA);
+
+  const renderPair = () => {
+    const [a, b] = factorPairs[pairIndex];
+    pairPrompt.textContent = `Сумма должна быть ${a + b}, произведение ${a * b}.`;
+    pairFirst.value = "";
+    pairSecond.value = "";
+    pairFeedback.className = "feedback";
+    pairFeedback.textContent = "";
+  };
+
+  const renderEquation = () => {
+    const [a, b] = factorPairs[equationIndex];
+    const middle = a + b;
+    const last = a * b;
+    quadraticPrompt.textContent = `x² ${formatSigned(middle, "x")} ${formatSigned(last)} = 0`;
+    rootFirst.value = "";
+    rootSecond.value = "";
+    quadraticFeedback.className = "feedback";
+    quadraticFeedback.textContent = "";
+  };
+
+  document.getElementById("pairCheck").addEventListener("click", () => {
+    const [a, b] = factorPairs[pairIndex];
+    const first = Number(pairFirst.value);
+    const second = Number(pairSecond.value);
+    const complete = pairFirst.value !== "" && pairSecond.value !== "";
+    const ok = complete && sameUnorderedPair(first, second, a, b);
+    pairFeedback.className = `feedback ${ok ? "good" : "bad"}`;
+    pairFeedback.textContent = ok
+      ? `Верно: ${a} + (${b}) = ${a + b}, а ${a} · (${b}) = ${a * b}.`
+      : "Пока не сходится. Выпишите пары множителей последнего числа и проверьте их сумму.";
+  });
+  document.getElementById("pairNext").addEventListener("click", () => {
+    pairIndex = nextIndex(pairIndex);
+    renderPair();
+  });
+
+  document.getElementById("quadraticCheck").addEventListener("click", () => {
+    const [a, b] = factorPairs[equationIndex];
+    const first = Number(rootFirst.value);
+    const second = Number(rootSecond.value);
+    const complete = rootFirst.value !== "" && rootSecond.value !== "";
+    const ok = complete && sameUnorderedPair(first, second, -a, -b);
+    quadraticFeedback.className = `feedback ${ok ? "good" : "bad"}`;
+    quadraticFeedback.textContent = ok
+      ? `Верно: скобки (x ${formatSigned(a)})(x ${formatSigned(b)}), поэтому корни ${-a} и ${-b}.`
+      : "Пока не сходится. Сначала найдите числа для скобок, затем поменяйте их знаки, чтобы получить корни.";
+  });
+  document.getElementById("quadraticNext").addEventListener("click", () => {
+    equationIndex = nextIndex(equationIndex);
+    renderEquation();
+  });
+
+  renderPair();
+  renderEquation();
 }
 
 function initGraph() {
