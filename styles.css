@@ -209,6 +209,8 @@ input::placeholder { color: #62768d; }
 .full { width: 100%; }
 .reader-output { margin-top: 16px; }
 .reader-output:empty { display: none; }
+.reader-verdict { margin-top: 13px; padding: 13px 15px; border: 1px solid rgba(105,229,205,.24); border-radius: 13px; background: rgba(30,113,100,.12); color: #cfe4df; line-height: 1.55; }
+.reader-verdict b { color: var(--mint); }
 .reader-parts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .reader-part { padding: 9px 12px; border-radius: 11px; background: var(--panel-3); color: #d8e7f6; font-family: "Cambria Math", Georgia, serif; }
 
@@ -252,6 +254,9 @@ input::placeholder { color: #62768d; }
 .infinity-side { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); text-align: center; }
 
 .lesson-footer { width: min(100% - 40px, 920px); display: flex; justify-content: space-between; gap: 12px; margin: 20px auto 70px; padding-top: 24px; border-top: 1px solid var(--line); }
+.site-credit { width: min(100% - 40px, 920px); margin: -44px auto 28px; color: #71869e; font-size: .78rem; text-align: center; }
+.site-credit a { color: #9eb0c5; text-underline-offset: 3px; }
+.site-credit a:hover { color: var(--mint); }
 .scrim { display: none; }
 .rules-dialog { width: min(680px, calc(100% - 28px)); max-height: 86vh; padding: 0; color: var(--text); border: 1px solid var(--line); border-radius: 24px; background: #0b1929; box-shadow: var(--shadow); }
 .rules-dialog::backdrop { background: rgba(1,6,12,.76); backdrop-filter: blur(7px); }
